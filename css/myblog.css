@@ -1,0 +1,195 @@
+/*afecta a todos los elementos de la pagina, quita el estilo de las listas, pixel de los margenes y del relleno 0, colores y decoraion del tecto fuera para poder daer stilo a los enlaces */
+*{
+  list-style:none;
+  list-style-type:none;
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+  color: inherit;
+
+}
+/*el id presentacion cambia la letra a color amarillo y fondo rosa*/
+#presentacion{
+  color: yellow;
+  background-color:pink;
+
+}
+
+/* la primera letra del id presentacion cambia la letra a color gris y el fondo a gris claro*/
+#presentacion::first-letter{
+  color: grey;
+  background-color:lightgrey;
+}
+
+
+/*estilo de los titulos h1,h2 texto centrado borces circulares con tamaño 100px color de borde tamaño de la letra y el margen de 10px*/
+h1,h2{
+  background-color: yellow;
+  color:white;
+  text-align: center;
+  border-style: solid;
+  border-radius: 100px;
+  border-color:#48acf0;
+  font-size: 30px;
+  margin: 10px;
+}
+
+/*estilo de los titulos h3,h4,h5*/
+
+h3,h4,h5{
+  background-color: yellow;
+  color:white;
+  text-align: center;
+  border-style: solid;
+  border-radius: 100px;
+  border-color:#48acf0;
+  font-size: 20px;
+  margin: 10px;
+}
+
+/*estilo de los titulos h6*/
+
+h6{
+  background-color: yellow;
+  color:white;
+  text-align: center;
+  border-style: solid;
+  border-radius: 100px;
+  border-color:#48acf0;
+  font-size: 25px;
+  margin: 10px;
+}
+
+
+
+/*lita de navegacion distancia del margen y del padding 0px*/
+ nav{
+   padding: 0px;
+   margin: 0px;
+}
+
+/*para definir los margenes de la lista, el tipo de letra,que no salgan del espacio determinado, y determinar el espacio*/
+ol{
+  margin: auto;
+  width: 500px;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+/*definir la pare principar de la lista*/
+li{
+  background-color: pink;
+  color:yellow;
+  width: 500px;
+  padding: 10px 15px;
+  display: block;
+}
+
+/*definir la pare principar de la lista cuando se le pasa el rato por encima*/
+
+li:hover{
+  background-color:yellow;
+  color:white;
+}
+
+/*definir las sublistas de la lista colores y que no aparezca*/
+
+li>ol>li{
+  display: none;
+  color: blue;
+  background-color: yellow;
+}
+
+/*para que cuando pasamos el rato por encima aparezca la sublista*/
+
+li:hover>ol>li{
+  display: block;
+}
+/*para que no aparezca*/
+
+li>ol>li>ul{
+  display: none;
+}
+
+/*para que cuando pasamos el rato por encima aparezca*/
+
+li>ol>li:hover>ul{
+  display: block;
+}
+
+/*cambiar el estilo de soluciones y ejercicios, tanto de html como do phyton */
+li>ol>li>ul>li{
+  background-color: pink;
+  color:yellow;
+}
+
+
+/*estilo de las imagenes a la derecha, tamaño, y espacio determinado*/
+
+#imgphyton{
+  float:right;
+  overflow:hidden;
+  height:50px;
+  width:50px;
+
+}
+
+
+
+/*cambiar la tabla cuandos se le pase el raton por encima*/
+table:hover{
+  color: blue;
+  background-color: yellow;
+  text-align: center;
+  border: blue 1px solid;
+}
+
+/*cambiar la tabla */
+
+table{
+  color: yellow;
+  background-color: blue;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: yellow 1px ;
+  border-style: dashed;
+
+}
+
+
+
+/*paragrafos margenes y colores*/
+p{
+  margin-left: 15px;
+  background-color:pink;
+  color: yellow;
+}
+
+
+/*enlaces cuando clikeas en ellos se ponen de fondo azul y letras de color naranja*/
+
+
+a:focus{
+  background-color:pink;
+  color:yellow;
+
+}
+
+/*la clase prophyton aplicarle esos estilos */
+
+.prophyton{
+  background-color:yellow;
+  color:blue;
+}
+
+/*la clase htmlcsss aplicarle esos estilos */
+
+.htmlcsss{
+  background-color:orange;
+  color:white;
+}
+
+#creador{
+  float:right;
+}
