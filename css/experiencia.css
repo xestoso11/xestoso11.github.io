@@ -1,0 +1,65 @@
+/* Texto */
+
+.information {
+  width: 100%;
+  padding: 20px 50px;
+  margin-bottom: 30px;
+  font-family: "Open Sans", sans-serif;
+}
+.information h1 {
+  color: #333;
+  font-size: 1.5rem;
+  padding: 0px 10px;
+  border-left: 3px solid #F03861;
+}
+.information h3 {
+  color: #e0e0e0;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 0px 10px;
+  border-left: 3px solid #F03861;
+}
+.information p {
+  padding: 10px 0px;
+}
+
+.centro{
+  display: flex;
+  justify-content: center;
+}
+
+.column {
+  float: left;
+  width: 48%;
+  margin: 1%;
+  padding: 3%;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  color: black;
+  background-color: #e7e7e7;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border: none;
+  cursor: pointer;
+}
+
+.containerTab {
+  padding: 20px;
+  color: white;
+  margin-bottom: 1% ;
+  display: none;
+  background-color: #24262b;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.closebtn {
+  float: right;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
