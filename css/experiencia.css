@@ -63,3 +63,7 @@
   font-size: 35px;
   cursor: pointer;
 }
+.list li{
+  list-style-type: circle;
+  margin: 1%;
+}

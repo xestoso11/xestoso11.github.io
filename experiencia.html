@@ -1,7 +1,3 @@
-
-<!--
-  https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_timeline
--->
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -24,7 +20,7 @@
     }
   </script>
   <body>
-    <h1 class="centro">Xestoso11</h1>
+    <h1 class="centro">Curriculum</h1>
     <nav class="nav">
       <ul>
         <li><a href="index.html">Inicio</a></li>
@@ -57,20 +53,24 @@
       <br>
       <h3>¿Porque entre a esta empresa?</h3>
       <p>
-        La finalidad por la que entre en esta empresa fue para tener una base en desarrollo y una visión diferente a la de sistemas, que me permitiera poder trabajar en un puesto con perfil devops en un futuro con más facilidad.
+        La finalidad por la que entre en esta empresa fue para tener una base en desarrollo y una visión diferente a la que tiene un técnico de sistemas, 
+        que me permitiera poder trabajar en un puesto con perfil devops con más facilidad.
       </p>
       <br>
-      <h3>Inicios</h3>
+      <h3>Inicios y evolución</h3>
       <p> 
-        En esta empresa realize un bootcamp para convertirme en desarrollador full stack, en la que aprendí a usar lenguajes como java, typescript, html y css.
-        En toda la parte de backend usamos como lenguaje java además de spring boot para facilitar el desarrollo con sus clases, interfaces y anotaciones ya precreadas, como base de datos usamos h2 una base de datos en memoria.
-        En el frontend usamos el framework angular, además de node también diferentes librerias de css como bootstrap y SweetAlert2, que nos facilito mucho el trabajo para el diseño de la interfaz de usuario.
+        En esta empresa realize un bootcamp para convertirme en desarrollador full stack, en la que aprendí a usar lenguajes como java, typescript y permitio mi mejorar en html y css.
+        En toda la parte de backend usamos como lenguaje java, además de spring boot para facilitar el desarrollo con sus clases, interfaces y anotaciones ya precreadas,
+        como base de datos usamos h2 una base de datos en memoria.
+        En el frontend usamos el framework angular, además de node, también diferentes librerias de css como bootstrap y SweetAlert2, que nos facilito mucho el trabajo para el diseño de la interfaz de usuario.
       </p>
       <br>
       <p>
-        Terminado el bootcamp los tutores conformaron equipos de seis personas con las que tuvimos que aprender a trabajar conjuntamente, para desarrollar una aplicación desde cero, a través de unos requisitos indicados por ellos. 
+        Terminado el bootcamp los tutores conformaron equipos de seis personas con las que tuvimos que aprender a trabajar conjuntamente, para desarrollar una aplicación desde cero,
+        a través de unos requisitos indicados por ellos. 
         Inicialmente generamos unas tareas principales para el desarrollo de esta aplicación, que a su vez fuimos dividiendo en subtareas, en las que estipulamos unos tiempos para cada tarea.
-        En el desarrollo de esta aplicación tuvimos que aprender a buscar apis externas que realizaran algunas de las funciones que nos pidieron e a implementarlas en nuestro código de forma que funcionaran correctamente
+        En el desarrollo de esta aplicación tuvimos que aprender a buscar apis externas que realizaran algunas de las funciones que nos pidieron,
+        e a implementarlas en nuestro código de forma que funcionaran correctamente.
       </p>
       <br>
 
@@ -86,26 +86,61 @@
       <br>
       <h3>¿Porque entre a esta empresa?</h3>
       <p>
-        La finalidad por la que entre en esta empresa fue para empezar a trabajar en un puesto relacionado con sistemas y que me permitiera continuar aprendiendo,
-        aparte de que se trataba de un equipo que se estaba comenzando a formar por lo que habria muchas posibilidades de futuro.
+        La razón por la que me uni a esta empresa fue para empezar a trabajar en un puesto relacionado con sistemas y que me permitiera continuar aprendiendo,
+        aparte de que se trataba de unha seción que se estaba comenzando a formar, por lo que habria muchas oportunidades de futuro.
       </p>
       <br>
-      <h3>Inicios</h3>
+      <h3>Inicios y evolución</h3>
       <p> 
         Inicie mi puesto como implantador de una aplicación para diferentes puerto de españa, la aplicación se llama Ágata.
       </p>
+      <p>
+        Gracias a está aplicación aprendí a trabajar con activos, propiedades de activos, plantillas, alertas, y protocolos para enviar las alertas a través de diferentes medios de comunicación, usuarios, grupos de usarios y asignación de permisos.
+      </p>
       <br>
       <p>
-        a
+        La aplicación que más uso en el día a día es mobaxterm, y la creación de tuneles a través de ella para tener conectividad o probarla con dispositivos y aplicaciones, 
+        todas las máquinas virtuales son de alguna distro de linux, tambien uso mRemoteNG, cuando se tratan de máquinas con interfaz gráfica todas windows, y anydesk para alguna máquina muy concreta.
       </p>
+      <p>  
+        A parte del uso de diferentes aplicaciones de vpn forticlient, checkpoint y  
+      </p>
+      <br>
+      <p>Adquirí experiencia para motorizaban diferentes dispositivos a través de protocolos como modbus, snmp, icmp, peticiones rest,</p>
+      <ul class="list">
+        <li>
+          Para motorizar activos a través de modbus, tanto desde la propia aplicación desde la que se tenia que motorizar, como usando aplicaciones externas como Modbus Poll o radzio, 
+          para comprobar la conectividad, o si los valores de las diferentes direciones son correctos.
+        </li>
+        <li>
+          Para la motorizar de activos a través de snmp, para leer los mibs y buscar los oid que nos podrian interesar para motorizar usabamos ireasoning, 
+          depues de encontrar la propiedad que nos intesara, sacábamos el oid y le haciamos un snmpwalk o snmpget, determinando si el oid nos fuese a devolver 1 único valor o varios valores,
+          para comprobar que esa direción existe y nos da un valor coerente, para despues motorizarla desde la aplicación de la empresa.
+        </li>
+        <li>
+          Para el protocolo icmp, haciendo un ping podiamos comprobar si teniamos conectividad.
+        </li>
+        <li>
+          Para las peticiones rest, podiamos probar desde un curl, o mirar si la direción existia con un navegador web, hasta hacer un tunel con mobaxterm y comprobarlo desde postman
+        </li>
+      </ul>
+
+      <p>
+       Aparte de la aplicación Ágata, se monto un prometheus para poder tener métricas de la aplicación y de las máquinas en donde estaba alojada, para que nos avisase si algo fallaba,
+       para recolectar las métricas de las máquinas usamos node_exporte, para las métricas de los contenedores docker cadvisor, mongo_exporter y mysql_exporter para las métricas de las bases de datos,
+       Blackbox exporter para recolectar métricas de endpoinds, para apache apache_exporter, para kafka y zookeper JMX Exporter, y para recolectar las métricas de los micros de la aplicacions usamos el propio prometheus,
+       y para poder graficar todos los datos grafana, y para las alertas alermanager junto a msteams, para poder tener tanto alertas de email como por equipos de teams.
+       Todo esto estaba montado en un docker compose.
+      </p>
+      <br>
+      <p>Llegamos a desarrollar una api entera en nodejs, para implementar una funcionalidad dentro de la aplicación</p>
       <br>
 
       <h3>¿Cuanto llevo en la empresa?</h3>
       <p>
-        Desde el 5 de Octubre hasta ahora
+        Desde el 5 de Octubre hasta la actualidad
       </p>    
     </div>
-
 
 
     <footer class="footer">
