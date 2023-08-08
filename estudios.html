@@ -17,7 +17,15 @@
         x[i].style.display = "none";
       }
       document.getElementById(tabName).style.display = "block";
-    }
+    };
+    function getCurrentURL () {
+      return window.location.hash 
+    };
+    const url = getCurrentURL();
+    const urledit = url.replace("#", "");
+    window.onload = function() {
+      document.getElementById(urledit).style.display = "block";
+    };
   </script>
   <body>
     <h1 class="centro">Curriculum</h1>
@@ -75,16 +83,16 @@
           <div class="footer-col">
             <h4>Estudios</h4>
             <ul>
-              <li><a href="#">CPI Virxe da cela</a></li>
-              <li><a href="#">IES María Casares</a></li>
-              <li><a href="#">CPR Liceo La Paz</a></li>
+              <li><a class="url" href="estudios.html#b1" onclick="openTab('b1');">CPI Virxe da cela</a></li>
+              <li><a class="url" href="estudios.html#b2" onclick="openTab('b2');">IES María Casares</a></li>
+              <li><a class="url" href="estudios.html#b3" onclick="openTab('b3');">CPR Liceo La Paz</a></li>
             </ul>
           </div>
           <div class="footer-col">
             <h4>Experiencia</h4>
             <ul>
-              <li><a href="#">Atos</a></li>
-              <li><a href="#">Emetel</a></li>
+              <li><a class="url" href="experiencia.html#b1" onclick="openTab('b1');">Atos</a></li>
+              <li><a class="url" href="experiencia.html#b2" onclick="openTab('b2');">Emetel</a></li>
             </ul>
           </div>
           <div class="footer-col">

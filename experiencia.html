@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/experiencia.css"/>
     <link rel="stylesheet" type="text/css" href="css/footer.css"/>
     <link rel="stylesheet" type="text/css" href="css/nav.css"/>
+    <meta property="og:url" content="experiencia.html#b1">
 
   </head>
   <script>
@@ -17,7 +18,15 @@
         x[i].style.display = "none";
       }
       document.getElementById(tabName).style.display = "block";
-    }
+    };
+    function getCurrentURL () {
+      return window.location.hash 
+    };
+    const url = getCurrentURL();
+    const urledit = url.replace("#", "");
+    window.onload = function() {
+      document.getElementById(urledit).style.display = "block";
+    };
   </script>
   <body>
     <h1 class="centro">Curriculum</h1>
@@ -51,7 +60,7 @@
       <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
       <h2>Atos</h2>
       <br>
-      <h3>¿Porque entre a esta empresa?</h3>
+      <h3>Motivación para en entrar a la empresa</h3>
       <p>
         La finalidad por la que entre en esta empresa fue para tener una base en desarrollo y una visión diferente a la que tiene un técnico de sistemas, 
         que me permitiera poder trabajar en un puesto con perfil devops con más facilidad.
@@ -59,14 +68,14 @@
       <br>
       <h3>Inicios y evolución</h3>
       <p> 
-        En esta empresa realize un bootcamp para convertirme en desarrollador full stack, en la que aprendí a usar lenguajes como java, typescript y permitio mi mejorar en html y css.
+        En esta empresa realize un bootcamp para convertirme en desarrollador full stack, en la que aprendí a usar lenguajes como java, typescript y permitió mi mejora en html y css.
         En toda la parte de backend usamos como lenguaje java, además de spring boot para facilitar el desarrollo con sus clases, interfaces y anotaciones ya precreadas,
         como base de datos usamos h2 una base de datos en memoria.
         En el frontend usamos el framework angular, además de node, también diferentes librerias de css como bootstrap y SweetAlert2, que nos facilito mucho el trabajo para el diseño de la interfaz de usuario.
       </p>
       <br>
       <p>
-        Terminado el bootcamp los tutores conformaron equipos de seis personas con las que tuvimos que aprender a trabajar conjuntamente, para desarrollar una aplicación desde cero,
+        Terminado el bootcamp, los tutores conformaron equipos de seis personas con las que tuvimos que aprender a trabajar conjuntamente, para desarrollar una aplicación desde cero,
         a través de unos requisitos indicados por ellos. 
         Inicialmente generamos unas tareas principales para el desarrollo de esta aplicación, que a su vez fuimos dividiendo en subtareas, en las que estipulamos unos tiempos para cada tarea.
         En el desarrollo de esta aplicación tuvimos que aprender a buscar apis externas que realizaran algunas de las funciones que nos pidieron,
@@ -74,7 +83,7 @@
       </p>
       <br>
 
-      <h3>¿Porque no me quedé?</h3>
+      <h3>¿Porque no me permanecí en la empresa?</h3>
       <p>
         Durante las prácticas de ciclo que fueron aproximadamente 3 meses, me indicaron desde un primer momento que no se iba a tocar nada relacionado con sistemas, y que estaría todo completamente relacionado con desarrollo de aplicaciones web, algo que yo no estaba buscando.
       </p>
@@ -84,10 +93,10 @@
       <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
       <h2>Emetel</h2>
       <br>
-      <h3>¿Porque entre a esta empresa?</h3>
+      <h3>Motivación para en entrar a la empresa</h3>
       <p>
         La razón por la que me uni a esta empresa fue para empezar a trabajar en un puesto relacionado con sistemas y que me permitiera continuar aprendiendo,
-        aparte de que se trataba de unha seción que se estaba comenzando a formar, por lo que habria muchas oportunidades de futuro.
+        aparte de que se trataba de unha sección que se estaba comenzando a formar, por lo que habría muchas oportunidades de futuro.
       </p>
       <br>
       <h3>Inicios y evolución</h3>
@@ -95,36 +104,39 @@
         Inicie mi puesto como implantador de una aplicación para diferentes puerto de españa, la aplicación se llama Ágata.
       </p>
       <p>
-        Gracias a está aplicación aprendí a trabajar con activos, propiedades de activos, plantillas, alertas, y protocolos para enviar las alertas a través de diferentes medios de comunicación, usuarios, grupos de usarios y asignación de permisos.
+        Gracias a está aplicación aprendí a trabajar con activos, propiedades de activos, plantillas, alertas, usuarios, grupos de usarios, asignación de permisos de estos, y protocolos para enviar las alertas a través de diferentes medios de comunicación.
       </p>
       <br>
       <p>
         La aplicación que más uso en el día a día es mobaxterm, y la creación de tuneles a través de ella para tener conectividad o probarla con dispositivos y aplicaciones, 
-        todas las máquinas virtuales son de alguna distro de linux, tambien uso mRemoteNG, cuando se tratan de máquinas con interfaz gráfica todas windows, y anydesk para alguna máquina muy concreta.
+        todas las máquinas virtuales son de alguna distro de linux, tambien uso mRemoteNG, cuando se tratan de máquinas con interfaz gráfica, todas windows, y anydesk para alguna máquina muy concreta.
       </p>
       <p>  
-        A parte del uso de diferentes aplicaciones de vpn forticlient, checkpoint y  
+        A parte del uso de diferentes aplicaciones de vpn, forticlient, checkpoint y Pulse Secure para conectarme a las diferentes máquinas virtuales que usamos para implantar la aplicacion.
       </p>
       <br>
-      <p>Adquirí experiencia para motorizaban diferentes dispositivos a través de protocolos como modbus, snmp, icmp, peticiones rest,</p>
+      <p>Aprendí a motorizaban diferentes dispositivos a través de protocolos como modbus, snmp, icmp, peticiones rest, 
+        tanto desde la propia aplicación como usando aplicaciones externas, desde aplicaciones externas para determinar que no fuese problema de conectividad o que el dispositivo no estuviese funcionando correctamente.</p>
       <ul class="list">
         <li>
-          Para motorizar activos a través de modbus, tanto desde la propia aplicación desde la que se tenia que motorizar, como usando aplicaciones externas como Modbus Poll o radzio, 
-          para comprobar la conectividad, o si los valores de las diferentes direciones son correctos.
+          Para motorizar activos a través de modbus, como aplicaciones externas usabamos Modbus Poll o radzio, 
+          para comprobar la conectividad, o si los valores de las diferentes direciones eran los correctos.
         </li>
         <li>
-          Para la motorizar de activos a través de snmp, para leer los mibs y buscar los oid que nos podrian interesar para motorizar usabamos ireasoning, 
-          depues de encontrar la propiedad que nos intesara, sacábamos el oid y le haciamos un snmpwalk o snmpget, determinando si el oid nos fuese a devolver 1 único valor o varios valores,
-          para comprobar que esa direción existe y nos da un valor coerente, para despues motorizarla desde la aplicación de la empresa.
+          Para la motorizar de activos a través de snmp, para leer los mibs y buscar los oid que nos podrían interesar para motorizar usabamos ireasoning, 
+          después de encontrar la propiedad que nos interesara, sacábamos el oid y le hacíamos un snmpwalk o snmpget, dependiendo si el oid nos fuese a devolver 1 único valor o varios valores,
+          para comprobar que esa direción existe y nos da un valor coherente, para después motorizarla desde la aplicación de la empresa.
         </li>
         <li>
-          Para el protocolo icmp, haciendo un ping podiamos comprobar si teniamos conectividad.
+          Para el protocolo icmp, haciendo un ping se comprobar si teniamos conectividad.
         </li>
         <li>
           Para las peticiones rest, podiamos probar desde un curl, o mirar si la direción existia con un navegador web, hasta hacer un tunel con mobaxterm y comprobarlo desde postman
         </li>
       </ul>
+      <p>Usamos bases de datos como MySQL, Monogo y Postgress, para hacer cambios o mirar datos usamos aplicaciones como DBeaver,mongodb compass, mongochef, o accediendo directamente por terminal</p>
 
+      <br>
       <p>
        Aparte de la aplicación Ágata, se monto un prometheus para poder tener métricas de la aplicación y de las máquinas en donde estaba alojada, para que nos avisase si algo fallaba,
        para recolectar las métricas de las máquinas usamos node_exporte, para las métricas de los contenedores docker cadvisor, mongo_exporter y mysql_exporter para las métricas de las bases de datos,
@@ -134,8 +146,10 @@
       </p>
       <br>
       <p>Llegamos a desarrollar una api entera en nodejs, para implementar una funcionalidad dentro de la aplicación</p>
-      <br>
 
+      <br>
+      <p>Además de crear tareas programadas tanto en linux como en windows, y creación de script en bash, Powershell, Python, AutoIt</p>
+      <br>
       <h3>¿Cuanto llevo en la empresa?</h3>
       <p>
         Desde el 5 de Octubre hasta la actualidad
@@ -149,16 +163,16 @@
           <div class="footer-col">
             <h4>Estudios</h4>
             <ul>
-              <li><a href="#">CPI Virxe da cela</a></li>
-              <li><a href="#">IES María Casares</a></li>
-              <li><a href="#">CPR Liceo La Paz</a></li>
+              <li><a class="url" href="estudios.html#b1" onclick="openTab('b1');">CPI Virxe da cela</a></li>
+              <li><a class="url" href="estudios.html#b2" onclick="openTab('b2');">IES María Casares</a></li>
+              <li><a class="url" href="estudios.html#b3" onclick="openTab('b3');">CPR Liceo La Paz</a></li>
             </ul>
           </div>
           <div class="footer-col">
             <h4>Experiencia</h4>
             <ul>
-              <li><a href="#">Atos</a></li>
-              <li><a href="#">Emetel</a></li>
+              <li><a class="url" href="experiencia.html#b1" onclick="openTab('b1');">Atos</a></li>
+              <li><a class="url" href="experiencia.html#b2" onclick="openTab('b2');">Emetel</a></li>
             </ul>
           </div>
           <div class="footer-col">

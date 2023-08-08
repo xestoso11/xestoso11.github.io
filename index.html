@@ -22,7 +22,15 @@
         x[i].style.display = "none";
       }
       document.getElementById(tabName).style.display = "block";
-    }
+    };
+    function getCurrentURL () {
+      return window.location.hash 
+    };
+    const url = getCurrentURL();
+    const urledit = url.replace("#", "");
+    window.onload = function() {
+      document.getElementById(urledit).style.display = "block";
+    };
   </script>
   <body>
     <h1 class="centro">Curriculum</h1>
@@ -46,7 +54,7 @@
 
     <div class="row">
       <div class="column" onclick="openTab('b1');" >
-        Box 1
+        Presentación
       </div>
       <button class="column" onclick="openTab('b2');" >
         Aptitudes
@@ -58,7 +66,7 @@
     <!-- Full-width columns: (hidden by default) -->
     <div id="b1" class="containerTab" >
       <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-      <h2>Box 1</h2>
+      <h2>Presentación</h2>
       <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
     </div>
 
@@ -70,7 +78,7 @@
       <p>Desde pequeño siempre me gusto aprender sobre todo lo que me rodea, ya sea sobre algo que me pueda facilitar el trabajo que realizo, o que pueda facilitarselo a alguien.</p>
       <br>
       <h3>Trabajo en equipo</h3>
-      <p>Me adapto bien para realizar diferentes tipos de trabajos con más personas.</p>
+      <p>Me adapto bien para realizar diferentes tipos de trabajos en grupo.</p>
       <br>
       <h3>Resolutivo</h3>
       <p>Cuando se me proporciona un problema no dudo en intentar resolverso, y buscar diversos caminos para encontrar la solución más eficaz y más simple, aunque no conozca la tecnologia usada, me informo sobre ella para encontrar la solución al problema.</p>
@@ -86,9 +94,13 @@
     <div id="b3" class="containerTab">
       <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
       <h2>Aficiones</h2>
-      <p>Tengo muchas aficiones, que van cambiando a lo largo del tiempo, antes me encantaba invertir mi tiempo libre en hacer deporte y jugar a videojuego, ver series, y perlículas,
-        tuve una época que invertia mucho tiempo en aprender todo lo relacionados con el motor, ya sea de mécanica o electronica, que sigo manteniendo pero en menor medida,
-        ya que ahora invierto la gran mayoría de tiempo en aprender sobre arduino concretamente sobre la placa esp32, y montar con ella diferentes dispositivos
+      <p>Tengo muchas aficiones, que van cambiando a lo largo del tiempo, antes me encantaba invertir mi tiempo libre en hacer deporte y jugar a videojuego en los que podía competir con otras personas, ver series, y perlículas.
+      </p>
+      <p>
+        Tuve una época que invertia mucho tiempo en aprender todo lo relacionados con el motor, ya sea de mécanica o electronica, que sigo manteniendo pero en menor medida.
+      </p>
+      <p>
+        Ahora invierto la gran mayoría de tiempo en aprender sobre arduino concretamente sobre la placa esp32, y montar con ella diferentes dispositivos, no impidiendo esto, dejar de relacionarme con los amigos, hacer deporte, y ver noticias relacionadas con el mundo o la infomática.
       </p>
     </div>
 
@@ -99,16 +111,16 @@
           <div class="footer-col">
             <h4>Estudios</h4>
             <ul>
-              <li><a href="#">CPI Virxe da cela</a></li>
-              <li><a href="#">IES María Casares</a></li>
-              <li><a href="#">CPR Liceo La Paz</a></li>
+              <li><a class="url" href="estudios.html#b1" onclick="openTab('b1');">CPI Virxe da cela</a></li>
+              <li><a class="url" href="estudios.html#b2" onclick="openTab('b2');">IES María Casares</a></li>
+              <li><a class="url" href="estudios.html#b3" onclick="openTab('b3');">CPR Liceo La Paz</a></li>
             </ul>
           </div>
           <div class="footer-col">
             <h4>Experiencia</h4>
             <ul>
-              <li><a href="#">Atos</a></li>
-              <li><a href="#">Emetel</a></li>
+              <li><a class="url" href="experiencia.html#b1" onclick="openTab('b1');">Atos</a></li>
+              <li><a class="url" href="experiencia.html#b2" onclick="openTab('b2');">Emetel</a></li>
             </ul>
           </div>
           <div class="footer-col">
