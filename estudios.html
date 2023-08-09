@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Curriculum</title>
     <link  rel="icon"   href="img/favicon.png" type="image/png" />
-    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/estudios.css"/>
     <link rel="stylesheet" type="text/css" href="css/footer.css"/>
     <link rel="stylesheet" type="text/css" href="css/nav.css"/>
 
@@ -26,6 +26,13 @@
     window.onload = function() {
       document.getElementById(urledit).style.display = "block";
     };
+    window.onscroll = function() {myFunction()};
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("barra").style.width = scrolled + "%";
+    };
   </script>
   <body>
     <h1 class="centro">Curriculum</h1>
@@ -44,8 +51,65 @@
         </li>
         <li><a href="mailto:robertoxestoso@gmail.com?subject=Nos interesa tu curriculum">Contacto</a></li>
       </ul>
+        <div>
+          <div class="barra-inicial">
+            <div class="barra-progreso" id="barra"></div>
+          </div>
+        </div>
     </nav>
 
+
+    <br>
+
+    <div class="timeline">
+      <div class="container left">
+        <div class="content">
+          <h2>2005-2018 CPI Virxe da cela</h2>
+          <p>CPI Virxe da cela</p>
+        </div>
+      </div>
+      <div class="container right">
+        <div class="content">
+          <h2>2018-2020 IES María Casares</h2>
+          <p>Durante estes años me saque el titulo de Bachillerato STEAM, que es un bachillerato exclusivamente de ciencias, 
+            a aparte tienes que hacer un proyecto final de una variedad de temas sobre los que te dan a elegir, junto a tutores que son proferosres de universidad,
+            y al final lo tienes que presentar ante un jurado conformado por profesores de diferentes universidades,
+            mi proyecto se trataba de un espejo inteligente, montado en una raspberry pi,
+            en el que traia diferentes datos como datos del tiempo, la hora de llegada de los buses a ciertas paradas...
+            para mostrarlos en una pantalla, esta estaba detras de un espejo que dejaba pasar la luz de atras hacia delante, lo que permitía visualizar los datos de la pantalla.
+            </p>
+        </div>
+      </div>
+      <div class="container left">
+        <div class="content">
+          <h2>2020 Carnet de Conducir</h2>
+          <p>Obtuve el carnet b, al mes siguiente de cumplir la mayoría de edad para poder moverme sin tener que depender de nadie, y también para poder llevar a alguien si fuera necesario.</p>
+        </div>
+      </div>
+      <div class="container right">
+        <div class="content">
+          <h2>2020-2022 CPR Liceo La Paz</h2>
+          <p>CPR Liceo La Paz</p>
+        </div>
+      </div>
+      <div class="container left">
+        <div class="content">
+          <h2>2011</h2>
+          <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+        </div>
+      </div>
+      <div class="container right">
+        <div class="content">
+          <h2>2007</h2>
+          <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <!--
+      
     <div class="row">
       <div class="column" onclick="openTab('b1');" >
         CPI Virxe da cela
@@ -57,10 +121,41 @@
         CPR Liceo La Paz
       </button>
     </div>
-
+ 
     <div id="b1" class="containerTab" >
       <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
       <h2>Box 1</h2>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+
       <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
     </div>
 
@@ -74,11 +169,12 @@
       <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
       <h2>Box 3</h2>
       <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
-    </div>
+    </div> 
+    -->
 
 
     <footer class="footer">
-      <div class="container">
+      <div class="footer-container">
         <div class="row">
           <div class="footer-col">
             <h4>Estudios</h4>

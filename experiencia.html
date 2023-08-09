@@ -27,6 +27,13 @@
     window.onload = function() {
       document.getElementById(urledit).style.display = "block";
     };
+    window.onscroll = function() {myFunction()};
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("barra").style.width = scrolled + "%";
+    };
   </script>
   <body>
     <h1 class="centro">Curriculum</h1>
@@ -45,6 +52,11 @@
         </li>
         <li><a href="mailto:robertoxestoso@gmail.com?subject=Nos interesa tu curriculum">Contacto</a></li>
       </ul>
+      <div>
+        <div class="barra-inicial">
+          <div class="barra-progreso" id="barra"></div>
+        </div>
+      </div>
     </nav>
 
     <div class="row">
@@ -144,6 +156,7 @@
        y para poder graficar todos los datos grafana, y para las alertas alermanager junto a msteams, para poder tener tanto alertas de email como por equipos de teams.
        Todo esto estaba montado en un docker compose.
       </p>
+      <p>En docker también montamos un redpanda console para revisar los topics y consumers de los micros dentro de kafka.</p>
       <br>
       <p>Llegamos a desarrollar una api entera en nodejs, para implementar una funcionalidad dentro de la aplicación</p>
 
@@ -158,7 +171,7 @@
 
 
     <footer class="footer">
-      <div class="container">
+      <div class="footer-container">
         <div class="row">
           <div class="footer-col">
             <h4>Estudios</h4>

@@ -31,6 +31,13 @@
     window.onload = function() {
       document.getElementById(urledit).style.display = "block";
     };
+    window.onscroll = function() {myFunction()};
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("barra").style.width = scrolled + "%";
+    };
   </script>
   <body>
     <h1 class="centro">Curriculum</h1>
@@ -50,6 +57,11 @@
         </li>
         <li><a href="mailto:robertoxestoso@gmail.com?subject=Nos interesa tu curriculum">Contacto</a></li>
       </ul>
+      <div>
+        <div class="barra-inicial">
+          <div class="barra-progreso" id="barra"></div>
+        </div>
+      </div>
     </nav>
 
     <div class="row">
@@ -106,7 +118,7 @@
 
 
     <footer class="footer">
-      <div class="container">
+      <div class="footer-container">
         <div class="row">
           <div class="footer-col">
             <h4>Estudios</h4>
