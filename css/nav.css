@@ -9,9 +9,12 @@
     font-family: Helvetica, sans-serif;
   }
   
-  body, html {
-    background-color: #EEEEEE;
-  }
+body {
+  background-color: #EEEEEE;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
   
   /* *,
   *:before,
