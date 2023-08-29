@@ -51,10 +51,14 @@
   background-color: #24262b;
 }
 
-.row:after {
+.fila:after {
   content: "";
   display: table;
   clear: both;
+}
+.fila{
+  display: flex;
+  text-align: center; 
 }
 
 .closebtn {
