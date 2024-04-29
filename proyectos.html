@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Curriculum</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="img/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="css/experiencia.css"/>
+    <link rel="stylesheet" type="text/css" href="css/footer.css"/>
+    <link rel="stylesheet" type="text/css" href="css/nav.css"/>
+    <link rel="stylesheet" type="text/css" href="css/proyectos.css"/>
+    </head>
+    <script>
+        function openTab(tabName) {
+          var i, x;
+          x = document.getElementsByClassName("containerTab");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          document.getElementById(tabName).style.display = "block";
+        };
+        function getCurrentURL () {
+          return window.location.hash 
+        };
+        const url = getCurrentURL();
+        const urledit = url.replace("#", "");
+        window.onload = function() {
+          document.getElementById(urledit).style.display = "block";
+        };
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          var scrolled = (winScroll / height) * 100;
+          document.getElementById("barra").style.width = scrolled + "%";
+        };
+      </script>
+      <script>
+        // Hacer una solicitud GET a la API de GitHub
+        fetch('https://api.github.com/users/xestoso11/repos')
+          .then(response => response.json())
+          .then(data => {
+            const reposList = document.querySelector('.repos-list');
+            data.forEach(repo => {
+              const listItem = document.createElement('li');
+              const link = document.createElement('a');
+              link.href = repo.html_url;
+              link.textContent = repo.name;
+              link.target = '_blank'; // Abrir enlace en una nueva pestaña
+              link.rel = 'noopener noreferrer'; // Seguridad para enlaces externos
+              listItem.appendChild(link);
+              reposList.appendChild(listItem);
+            });
+          })
+          .catch(error => {
+            console.error('Hubo un problema con la solicitud fetch:', error);
+          });
+      </script>
+
+    <body>
+        <h1 class="centro">Proyectos personales</h1>
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="estudios.html">Estudios</a></li>
+            <li><a href="experiencia.html">Experiencia</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="mailto:robertoxestoso@gmail.com?subject=Nos interesa tu curriculum">Contacto</a></li>
+          </ul>
+            <div>
+              <div class="barra-inicial">
+                <div class="barra-progreso" id="barra"></div>
+              </div>
+            </div>
+        </nav>
+        <br>
+        <div class="centro">
+          <ul class="repos-list">
+          </ul>
+        </div>
+
+        <footer class="footer">
+          <div class="footer-container">
+            <div class="row">
+              <div class="footer-col">
+                <h4>Estudios</h4>
+                <ul>
+                  <li><a class="url" href="estudios.html#b1" onclick="openTab('b1');">CPI Virxe da cela</a></li>
+                  <li><a class="url" href="estudios.html#b2" onclick="openTab('b2');">IES María Casares</a></li>
+                  <li><a class="url" href="estudios.html#b3" onclick="openTab('b3');">CPR Liceo La Paz</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>Experiencia</h4>
+                <ul>
+                  <li><a class="url" href="experiencia.html#b1" onclick="openTab('b1');">Atos</a></li>
+                  <li><a class="url" href="experiencia.html#b2" onclick="openTab('b2');">Emetel</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>Proyectos</h4>
+                <ul>
+                  <li><a href="https://github.com/xestoso11/botones_en_arduino_esp32">Arduino</a></li>
+                  <li><a href="https://github.com/xestoso11/ApagarOrdenadorWin">Powershell</a></li>
+                  <li><a href="https://github.com/xestoso11/docker">Docker</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>Contacto</h4>
+                <div class="social-links">
+                  <a href="https://www.linkedin.com/in/roberto-uzal-couto" target="_blank"><i><img src="img/linkedin.png" alt="Image_error" width="100%"></i></a>
+                  <a href="https://github.com/xestoso11" target="_blank"><i><img src="img/github.svg" alt="Image_error" width="100%"></i></a>
+                </div>
+                <div class="email">
+                  <a href="mailto:robertoxestoso@gmail.com?subject=Nos interesa tu curriculum" target="_blank">robertoxestoso@gmail.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+    </body>
+</html>
