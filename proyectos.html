@@ -11,51 +11,82 @@
     <link rel="stylesheet" type="text/css" href="css/proyectos.css"/>
     </head>
     <script>
-        function openTab(tabName) {
-          var i, x;
-          x = document.getElementsByClassName("containerTab");
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-          }
-          document.getElementById(tabName).style.display = "block";
-        };
-        function getCurrentURL () {
-          return window.location.hash 
-        };
-        const url = getCurrentURL();
-        const urledit = url.replace("#", "");
-        window.onload = function() {
-          document.getElementById(urledit).style.display = "block";
-        };
-        window.onscroll = function() {myFunction()};
-        function myFunction() {
-          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-          var scrolled = (winScroll / height) * 100;
-          document.getElementById("barra").style.width = scrolled + "%";
-        };
-      </script>
-      <script>
-        // Hacer una solicitud GET a la API de GitHub
-        fetch('https://api.github.com/users/xestoso11/repos')
+      function openTab(tabName) {
+        var i, x;
+        x = document.getElementsByClassName("containerTab");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        document.getElementById(tabName).style.display = "block";
+      };
+      function getCurrentURL () {
+        return window.location.hash 
+      };
+      const url = getCurrentURL();
+      const urledit = url.replace("#", "");
+      window.onload = function() {
+        document.getElementById(urledit).style.display = "block";
+      };
+      window.onscroll = function() {myFunction()};
+      function myFunction() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("barra").style.width = scrolled + "%";
+      };
+
+      // Código JavaScript para obtener los repositorios de GitHub y mostrar su información
+      fetch('https://api.github.com/users/xestoso11/repos')
+      .then(response => response.json())
+      .then(data => {
+        const reposList = document.getElementById('repos-list');
+        data.forEach(repo => {
+          const repoContainer = document.createElement('div');
+          repoContainer.classList.add('repo-container');
+          repoContainer.onclick = () => toggleRepoDetails(repo.id);
+          repoContainer.innerHTML = `<strong>${repo.name}</strong>`;
+          reposList.appendChild(repoContainer);
+
+          // Crear el panel de detalles del repositorio
+          const detailsPanel = document.createElement('div');
+          detailsPanel.id = `repo-details-${repo.id}`;
+          detailsPanel.classList.add('repo-details');
+          reposList.appendChild(detailsPanel);
+        });
+      })
+      .catch(error => {
+        console.error('Hubo un problema con la solicitud fetch:', error);
+      });
+
+      // Función para alternar la visibilidad del panel de detalles del repositorio
+      function toggleRepoDetails(repoId) {
+        const detailsPanel = document.getElementById(`repo-details-${repoId}`);
+        if (detailsPanel.style.display === 'block') {
+          detailsPanel.style.display = 'none';
+        } else {
+          detailsPanel.style.display = 'block';
+          // Obtener y mostrar los detalles del repositorio
+          fetch(`https://api.github.com/repositories/${repoId}`, {
+            headers: headers
+          })
           .then(response => response.json())
-          .then(data => {
-            const reposList = document.querySelector('.repos-list');
-            data.forEach(repo => {
-              const listItem = document.createElement('li');
-              const link = document.createElement('a');
-              link.href = repo.html_url;
-              link.textContent = repo.name;
-              link.target = '_blank'; // Abrir enlace en una nueva pestaña
-              link.rel = 'noopener noreferrer'; // Seguridad para enlaces externos
-              listItem.appendChild(link);
-              reposList.appendChild(listItem);
-            });
+          .then(repo => {
+            const detailsHtml = `
+              <p><strong>Descripción:</strong> ${repo.description}</p>
+              <p><strong>Licencia:</strong> ${repo.license ? repo.license.name : 'No especificada'}</p>
+              <p><strong>Estrellas:</strong> ${repo.stargazers_count}</p>
+              <p><strong>Fecha de creación:</strong> ${repo.created_at}</p>
+              <p><strong>Última actualización:</strong> ${repo.updated_at}</p>
+              <p><strong>URL:</strong> <a href="${repo.html_url}" target="_blank">${repo.html_url}</a></p>
+            `;
+            detailsPanel.innerHTML = detailsHtml;
           })
           .catch(error => {
-            console.error('Hubo un problema con la solicitud fetch:', error);
+            console.error('Hubo un problema al obtener los detalles del repositorio:', error);
           });
-      </script>
+        }
+      }
+    </script>
 
     <body>
         <h1 class="centro">Proyectos personales</h1>
@@ -73,11 +104,9 @@
               </div>
             </div>
         </nav>
-        <br>
-        <div class="centro">
-          <ul class="repos-list">
-          </ul>
-        </div>
+ 
+        <div id="repos-list" class="repos-list"></div>
+
 
         <footer class="footer">
           <div class="footer-container">
