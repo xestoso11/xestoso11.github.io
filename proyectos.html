@@ -66,9 +66,7 @@
         } else {
           detailsPanel.style.display = 'block';
           // Obtener y mostrar los detalles del repositorio
-          fetch(`https://api.github.com/repositories/${repoId}`, {
-            headers: headers
-          })
+          fetch(`https://api.github.com/repositories/${repoId}`)
           .then(response => response.json())
           .then(repo => {
             const detailsHtml = `
