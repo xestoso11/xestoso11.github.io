@@ -23,15 +23,30 @@
     background-color: #f03861;
   }
 
+/* Estilos para cada repositorio */
 .repo-container {
   border: 1px solid #ccc;
   margin-bottom: 10px;
   padding: 10px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+.repo-container:hover {
+  background-color: #f0f0f0;
+}
+/* Estilos para los detalles del repositorio */
 .repo-details {
   display: none;
   margin-top: 10px;
   padding: 10px;
   border: 1px solid #ccc;
 }
+/* Estilos para la flecha */
+.arrow {
+  display: inline-block;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+.arrow.open {
+  transform: rotate(180deg);
+    }

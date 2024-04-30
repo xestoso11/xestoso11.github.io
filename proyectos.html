@@ -24,9 +24,15 @@
       };
       const url = getCurrentURL();
       const urledit = url.replace("#", "");
+
       window.onload = function() {
-        document.getElementById(urledit).style.display = "block";
+        // Asignar eventos onclick después de que el DOM esté completamente cargado
+        const repoContainers = document.getElementsByClassName('repo-container');
+        for (let i = 0; i < repoContainers.length; i++) {
+          repoContainers[i].onclick = () => toggleRepoDetails(repoContainers[i].getAttribute('data-id'));
+        }
       };
+
       window.onscroll = function() {myFunction()};
       function myFunction() {
         var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -44,7 +50,7 @@
           const repoContainer = document.createElement('div');
           repoContainer.classList.add('repo-container');
           repoContainer.onclick = () => toggleRepoDetails(repo.id);
-          repoContainer.innerHTML = `<strong>${repo.name}</strong>`;
+          repoContainer.innerHTML = `<strong>${repo.name}</strong><span class="arrow" id="arrow-${repo.id}" onclick="toggleRepoDetails('${repo.id}')">&#x25BC;</span>`;
           reposList.appendChild(repoContainer);
 
           // Crear el panel de detalles del repositorio
@@ -60,12 +66,15 @@
 
       // Función para alternar la visibilidad del panel de detalles del repositorio
       function toggleRepoDetails(repoId) {
-        const detailsPanel = document.getElementById(`repo-details-${repoId}`);
-        if (detailsPanel.style.display === 'block') {
-          detailsPanel.style.display = 'none';
-        } else {
-          detailsPanel.style.display = 'block';
-          // Obtener y mostrar los detalles del repositorio
+      const detailsPanel = document.getElementById(`repo-details-${repoId}`);
+      const arrowIcon = document.getElementById(`arrow-${repoId}`);
+      if (detailsPanel.style.display === 'block') {
+        detailsPanel.style.display = 'none';
+        arrowIcon.classList.remove('open');
+      } else {
+        detailsPanel.style.display = 'block';
+        arrowIcon.classList.add('open');
+        // Obtener y mostrar los detalles del repositorio
           fetch(`https://api.github.com/repositories/${repoId}`)
           .then(response => response.json())
           .then(repo => {
